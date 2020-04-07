@@ -1,0 +1,11 @@
+from typing import List
+
+class Solution:
+    def sumZero(self, n: int) -> List[int]:
+        ans = []
+        for i in range(n // 2):
+            ans.append(i * 2 + 1)
+            ans.append(-(i * 2 + 1))
+        if n % 2 == 1:
+            ans.append(0)
+        return ans
